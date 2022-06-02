@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: theme('color.richBlack');
+    color: theme('colors.platinum');
+}
