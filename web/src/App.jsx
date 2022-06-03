@@ -1,20 +1,28 @@
-function Title ({title, children}){
+function Tweet({name, username, avatar, children}) {
   return (
-    <h1>{title} {children}</h1> //children => conteúdo entre as tags
+    <div className="flex space-x-3 p-4 border-b border-silver">
+      <div>
+        <img src="/web/src/avatar.png" />
+      </div>
+      <div>
+        <span className="font-bold text-sm">{name}</span>{' '}
+        <span className="text-sm text-silver">@{username}</span>
+        <p>{children}</p>
+      </div>
+    </div>
   )
 }
 
-export function App(){
+export function App() {
   return (
-    <div id = "col-avatar">
-      <div id = "col-avatar" class = "col">
-        <img src="/src/avatar.png" alt="#" class="tweet_img" />
-      </div>
-      <div id="col-text" class="col">
-        <span>Elon Musk</span>
-        <span>@elonmusk</span>
-        <p>Let's make Twitter maximum fun !</p>
-      </div>
-    </div>
+    <>
+      <Tweet name="Elon Musk" username="elonmusk" avatar="/web/src/avatar.png">
+        Let's make Twitter maximum fun!
+      </Tweet>
+
+      <Tweet name="Guilherme Yamasaki" username="guilhermeyamasaki" avatar="/web/src/avatar.png">
+        Let's make twitter maximum awesome!
+      </Tweet>
+    </>
   )
 }
