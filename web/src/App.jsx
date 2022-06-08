@@ -5,10 +5,9 @@ const MAX_TWEET_CHAR = 250
 
 function TweetForm(){
 
-  const [text, setText] = useState('')
+  const [text, setText] = useState('') //exporta array
   function changeText(e){
-    setText(e.target.value)
-    
+    setText(e.target.value) //value => valor escrito
   }
 
   return(
